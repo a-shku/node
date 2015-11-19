@@ -1,0 +1,6 @@
+#комментарий
+node_modules/
+just/
+nppBackup/
+#или можно так app/*bak
+# удалить из репозитория файлы папки git rm --cached <file>

@@ -1,0 +1,9 @@
+body {
+  color: blue;
+  font-size: 12px;
+  background: -webkit-linear-gradient(46deg, #cac, #555);
+  background: linear-gradient(44deg, #cac, #555);
+}
+body {
+  margin: 0 auto;
+}

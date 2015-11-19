@@ -1,0 +1,27 @@
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: 100%; }
+  .contrary-item:after {
+    clear: both;
+    content: "";
+    display: block; }
+  .contrary-list li {
+    width: 100%; }
+  .item-icon {
+    float: left;
+    padding-right: 5%; }
+  .mid {
+    position: relative;
+    /*display: block;*/
+    /*top: 50px;*/
+    -ms-transform: translateY(50%);
+        transform: translateY(50%);
+    -webkit-transform: translateY(50%); }
+    .mid:after {
+      clear: both;
+      content: "";
+      /*display: block;*/ } }
+
+@media screen and (max-width: 580px) {
+  .s-cart {
+    float: none; } }

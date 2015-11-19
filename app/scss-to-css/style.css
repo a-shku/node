@@ -1,0 +1,428 @@
+@charset "UTF-8";
+/*@import "includes/reset";
+@import "includes/settings";
+@import "includes/var";*/
+/*reset*/
+* {
+  margin: 0;
+  padding: 0; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  outline: 0;
+  background: transparent; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+*:focus {
+  outline: 0; }
+
+/*END reset*/
+@font-face {
+  font-family: 'SegoeWPLight';
+  src: url(//:) format("no404"), url("http://son.topdetal.com.ua/node/fonts/segeo-wp-light-webfont.woff") format("woff"), url("http://son.topdetal.com.ua/node/fonts/segeo-wp-light-webfont.ttf") format("truetype"), url("http://son.topdetal.com.ua/node/fonts/segeo-wp-light-webfont.svgz#SegoeWPLight") format("svg"), url("http://son.topdetal.com.ua/node/fonts/segeo-wp-light-webfont.svg#SegoeWPLight") format("svg"), url("http://son.topdetal.com.ua/node/fonts/SegoeWP-Light") format(".ttf");
+  font-weight: normal;
+  font-style: normal; }
+
+/*@font-face {
+    
+    font-family: 'Segoe WP N';
+    src: url(//:) format('no404'), url('http://son.topdetal.com.ua/node/fonts/SegoeWPN.ttf') format('truetype'),
+	url('http://son.topdetal.com.ua/node/fonts/SegoeWPN') format('.ttf');
+    font-weight: normal;
+    font-style: normal;
+}*/
+@font-face {
+  font-family: 'Segoe WP';
+  src: url(//:) format("no404"), url("http://son.topdetal.com.ua/node/fonts/SegoeWP.ttf") format("truetype"), url("http://son.topdetal.com.ua/node/fonts/SegoeWP") format(".ttf");
+  font-weight: normal;
+  font-style: normal; }
+
+/*Segoe WP*/
+html {
+  height: 100%;
+  font-family: "Segoe WP N";
+  background: #eed; }
+
+body {
+  height: 100%;
+  min-height: 100%;
+  /*background: #fad;*/ }
+
+.wrapper {
+  position: relative;
+  min-height: 100%; }
+
+footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  /*margin: 0 auto;*/
+  /*text-align: center;*/
+  /*margin-bottom: -20px;*/ }
+
+/*.wrapper {
+
+	background: green;
+	padding: 29px 90px 44px;
+	}*/
+.holder {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto; }
+  .holder:after {
+    display: block;
+    clear: both;
+    content: ''; }
+
+#header .logo {
+  display: block;
+  position: relative;
+  float: left;
+  height: 100%;
+  padding: 0 0 0 55px;
+  margin: 0 0 0 20px;
+  font: 400 42px/89px "SegoeWPLight";
+  color: #000;
+  text-decoration: none; }
+  #header .logo:before {
+    position: absolute;
+    display: block;
+    clear: both;
+    content: '“';
+    top: 50%;
+    left: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #5094f2;
+    font: 64px/63px "Source Sans Pro";
+    color: #fff;
+    text-align: center;
+    -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    -webkit-transform: translateY(-50%); }
+
+/*.opener-nav {
+	display: none;
+	float: left;
+	
+	@media screen and (max-width: 768px) {
+		display: block;
+	}
+}*/
+#top-menu {
+  float: right;
+  line-height: 58px;
+  font-size: 20.35px;
+  letter-spacing: 0.01em;
+  top: 28px;
+  position: relative;
+  right: 50px;
+  /*@media screen and (max-width: 768px) {
+		float: none;
+		clear: both;
+		display: none;
+	}*/ }
+  #top-menu ul:after {
+    display: block;
+    clear: both;
+    content: ''; }
+  #top-menu li {
+    float: left;
+    padding: 0 0 0 32px; }
+    #top-menu li:first-child {
+      padding-left: 0; }
+    @media screen and (max-width: 768px) {
+      #top-menu li {
+        /*float: none;*/
+        paddind: 0; } }
+  #top-menu a {
+    display: block;
+    padding: 0 4px;
+    border-bottom: 4px solid transparent;
+    color: #6c6c6c;
+    text-decoration: none; }
+    #top-menu a:hover, #top-menu a:active {
+      border-bottom-color: #5094f2; }
+    #top-menu a:focus {
+      border-bottom-color: green; }
+
+.slider-wrapper {
+  position: relative;
+  background: url("http://son.topdetal.com.ua/node/img/slider-bg.png") transparent no-repeat 0 0;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 50px; }
+  .slider-wrapper:after {
+    content: "";
+    background: url("http://son.topdetal.com.ua/node/img/arrow-top.png") repeat-x;
+    position: absolute;
+    bottom: 0;
+    height: 8px;
+    width: 100%; }
+
+.slider {
+  /*position: relative;*/
+  font-family: "Segoe WP";
+  color: #fff;
+  padding: 5% 10%; }
+
+.slick-current {
+  overflow: hidden; }
+
+.slide-1 > img {
+  display: inline-block;
+  /*position: relative;*/
+  padding: 0 9% 0 0;
+  float: left;
+  width: 40%; }
+
+.slide-text {
+  float: left;
+  padding: 8% 1%;
+  /*position: relative;*/
+  /*top:50%;*/
+  /*transform: translateY(50%);
+		-webkit-transform: translateY(50%);*/
+  font: 400 42px "SegoeWPLight";
+  min-width: 250px; }
+  .slide-text h2 {
+    color: #fff;
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 50px; }
+  .slide-text p {
+    /*line-height: 44px;*/
+    font-size: 26px;
+    line-height: 40px;
+    padding-bottom: 24px; }
+
+.sign-up {
+  /*display: block;*/
+  /*text-align: center;*/
+  position: relative;
+  max-width: 190px;
+  background: #5094f2;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+  padding: 4px 10px 4px 40px;
+  font-size: 22px;
+  text-decoration: none; }
+  .sign-up:before {
+    position: absolute;
+    clear: both;
+    content: '';
+    background: url("http://son.topdetal.com.ua/node/img/bird.png") no-repeat;
+    top: 50%;
+    left: 10px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    overflow: hidden;
+    -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    -webkit-transform: translateY(-50%); }
+
+.slide-2 > img {
+  display: inline-block;
+  position: relative;
+  padding: 0 1% 0 5%;
+  float: left;
+  width: 40%;
+  -webkit-transform: scale(-1, 1);
+      -ms-transform: scale(-1, 1);
+          transform: scale(-1, 1); }
+
+.slide-3 > img {
+  display: inline-block;
+  position: relative;
+  padding: 0 9% 0 0;
+  float: left;
+  width: 40%;
+  -webkit-transform: scale(1, -1);
+      -ms-transform: scale(1, -1);
+          transform: scale(1, -1); }
+
+.slick-prev, .slick-next {
+  width: 25px !important;
+  height: 63px !important; }
+
+.slick-next {
+  background-image: url("http://son.topdetal.com.ua/node/img/next.png") !important;
+  float: right;
+  right: 3% !important; }
+
+.slick-prev {
+  background-image: url("http://son.topdetal.com.ua/node/img/prev.png") !important;
+  left: 3% !important; }
+
+#main {
+  -webkit-border-image: url(http://son.topdetal.com.ua/node/img/arrow-top.png) 10 round;
+       -o-border-image: url(http://son.topdetal.com.ua/node/img/arrow-top.png) 10 round;
+          border-image: url(http://son.topdetal.com.ua/node/img/arrow-top.png) 10 round;
+  -moz-border-image: url(http://son.topdetal.com.ua/node/img/arrow-top.png) 10 round;
+  font-family: "Segoe WP N";
+  color: #6f7173;
+  padding-bottom: 41px; }
+
+.contrary-list {
+  margin-bottom: 50px;
+  font-size: 0;
+  letter-spacing: -4px;
+  line-height: 0; }
+
+.contrary-list li {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  width: 33.33%;
+  vertical-align: top; }
+
+.contrary-item {
+  margin: 0 auto;
+  display: block;
+  text-align: center; }
+
+.item-icon {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  padding-bottom: 12px; }
+
+h5 {
+  line-height: 40px; }
+
+.pen, .monitor, .basket {
+  border-radius: 100%;
+  width: 186px;
+  height: 186px;
+  margin: 0 auto; }
+
+.pen {
+  background: url("http://son.topdetal.com.ua/node/img/pen-icon.svg") center no-repeat; }
+
+.monitor {
+  background: url("http://son.topdetal.com.ua/node/img/monitor-icon.svg") center no-repeat; }
+
+.basket {
+  background: url("http://son.topdetal.com.ua/node/img/basket-icon.svg") center no-repeat; }
+
+.shopping-block h1 {
+  font: 42px/44px "Segoe WP N";
+  padding: 0 0 50px 5%;
+  box-sizing: border-box; }
+
+.s-cart {
+  float: left;
+  padding: 0 6% 10px 4%;
+  box-sizing: border-box;
+  max-width: 50%;
+  min-width: 300px; }
+  .s-cart img {
+    width: 100%; }
+
+.bullet {
+  margin: 0 10% 50px 4%; }
+  .bullet:after {
+    display: block;
+    clear: both;
+    content: ""; }
+  .bullet h2 {
+    font: 26.35px/42px "Segoe WP N"; }
+  .bullet p {
+    font: 15.35px/36px "Segoe WP N"; }
+
+#footer {
+  text-align: center;
+  border-top: 1px solid #e5e5e5;
+  line-height: 40px;
+  color: #6f7173;
+  font-family: "Segoe WP N";
+  text-align: center;
+  position: relative; }
+
+/*menu*/
+/*MENU*/
+/*nav a, nav:before, nav ul:before {
+  display: inline-block;
+  padding: 10px 0;
+  color: #fff;
+  text-align: center;
+  cursor: pointer; 
+  
+}*/
+@media (max-width: 1000px) {
+  #top-menu ul li {
+    top: 52px;
+    position: relative;
+    padding-bottom: 80px;
+    cursor: pointer;
+    z-index: 10;
+    display: block; }
+  nav:before {
+    content: "";
+    background: url("http://son.topdetal.com.ua/node/img/menu-icon.png");
+    width: 58px;
+    height: 44px;
+    display: block;
+    cursor: pointer;
+    float: right; }
+  nav:focus:before {
+    content: none; }
+  nav:focus ul:before {
+    content: "";
+    background: url("http://son.topdetal.com.ua/node/img/menu-icon.png");
+    width: 58px;
+    height: 44px;
+    float: right;
+    /*cursor: pointer;*/
+    right: 0; }
+  /*nav:not(:focus) ul:not(:active) { 
+    display: none;
+  }*/ }
